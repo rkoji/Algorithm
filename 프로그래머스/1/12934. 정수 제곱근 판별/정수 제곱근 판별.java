@@ -1,9 +1,9 @@
 import java.util.*;
 class Solution {
     public long solution(long n) {
-        long sqrt = (long)Math.sqrt(n);
-        if(n == Math.pow(sqrt,2)){
-            return (long)Math.pow(sqrt+1,2);
+        double x = Math.sqrt(n);
+        if(x == Math.floor(x)){
+            return (long)((x+1) * (x+1));
         }else{
             return -1;
         }
