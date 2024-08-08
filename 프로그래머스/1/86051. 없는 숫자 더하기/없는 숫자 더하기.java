@@ -1,9 +1,9 @@
 class Solution {
     public int solution(int[] numbers) {
-        int sum = 45;
-        for(int x : numbers){
-            sum -= x;
+        int sum = 0;
+        for(int i = 0 ; i < numbers.length ; i++){
+            sum += numbers[i];
         }
-        return sum;
+        return 45 - sum;
     }
 }
