@@ -1,11 +1,11 @@
 class Solution {
     public String solution(String s) {
         String answer = "";
-        int num = (int)Math.ceil((double)(s.length() /2) );
-        if(s.length() % 2 != 0){
-            answer = s.substring(num,num+1);
+        int a = s.length();
+        if(a % 2 == 0){
+            answer = s.substring(a/2-1,a/2+1);
         }else{
-            answer += s.substring(num-1,num+1);
+            answer = s.substring(a/2,a/2+1);
         }
         return answer;
     }
