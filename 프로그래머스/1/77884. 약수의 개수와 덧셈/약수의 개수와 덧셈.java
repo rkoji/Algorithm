@@ -1,19 +1,21 @@
 class Solution {
     public int solution(int left, int right) {
         int answer = 0;
-        for(int i = left ; i <= right ; i++){
-            int count = 0;
-            for(int j = 1 ; j <= i ; j++){
-                if(i % j == 0){
-                    count++;
+        int sum = 0;
+        for(int i = left; i <= right ; i++){
+            answer =0;
+            for(int k = 1 ; k <= i ; k++){
+                if( i % k == 0){
+                    answer++;
                 }
             }
-            if(count % 2 == 0){
-                answer += i;
+            if(answer % 2 == 0){
+                sum += i;
             }else{
-                answer -= i;
+                sum -= i;
             }
+           
         }
-        return answer;
+        return sum;
     }
 }
