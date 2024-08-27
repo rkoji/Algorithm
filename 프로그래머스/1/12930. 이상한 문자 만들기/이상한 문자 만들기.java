@@ -1,23 +1,23 @@
+import java.util.*;
 class Solution {
     public String solution(String s) {
-        String answer = "";
+        StringBuilder answer = new StringBuilder();
         int cnt = 0;
-        char[] arr = s.toCharArray();
-        for (int i = 0; i < arr.length; i++) {
-            if (arr[i] == ' ') {
-                answer += " ";
+        char[] array = s.toCharArray(); 
+
+        for (char c : array) {
+            if (c == ' ') {  
+                answer.append(c); 
                 cnt = 0;
             } else {
                 if (cnt % 2 == 0) {
-                    answer += Character.toUpperCase(arr[i]);
-                    cnt++;
+                    answer.append(Character.toUpperCase(c)); 
                 } else {
-                    answer += Character.toLowerCase(arr[i]);
-                    cnt++;
+                    answer.append(Character.toLowerCase(c));  
                 }
+                cnt++; 
             }
-         
         }
-        return answer;
+        return answer.toString();  
     }
 }
